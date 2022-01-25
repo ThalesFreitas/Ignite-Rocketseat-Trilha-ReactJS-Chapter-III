@@ -12,7 +12,6 @@ export default NextAuth({
             scope: 'read:user'
         }),
     ], 
-   
     callbacks: {
         async signIn(user, account, profile) {
             const {email} = user
@@ -35,15 +34,15 @@ export default NextAuth({
                     q.Match(
                         q.Index('user_by_email'),
                         q.Casefold(user.email)
-                    )
+                    ) 
                 )
              )
-            )
+            );
             return true
          } catch {
              return false
          }           
         },
-    }
-})
+    },
+});
 
