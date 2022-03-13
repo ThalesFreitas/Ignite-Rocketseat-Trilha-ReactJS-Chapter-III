@@ -35,12 +35,14 @@
 
             &:hover {
                 color: var(--white);
+                cursor: pointer;
             }
 
             //se home, post tiver ativo mudar a cor 
             &.active{
                 color: var(--white);
                 font-weight: bold;
+                
             }
 
             //todo link (home, post) que esta ativo, ele vai ter uma estilização diferente.
